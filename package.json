@@ -1,0 +1,8 @@
+{ "name" : "DndCharSheets",
+  "version" : "0.0.1",
+  "dependencies" : {
+    "jade" : "latest",
+    "coffee" : "latest",
+    "sass" : "latest"
+  }
+}
