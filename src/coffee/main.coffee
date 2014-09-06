@@ -1,7 +1,7 @@
 dndSheetsApp = angular.module 'dndCharacterSheets', []
 
 dndSheetsApp.controller 'CharSheet', ($scope, $http) ->
-  $http.get("/js/data.json").success((data) ->
+  $http.get("/static/data.json").success((data) ->
     $scope.char = data)
   $scope.abilityScoreUpdate = () ->
     console.log(@)
@@ -15,4 +15,3 @@ dndSheetsApp.controller 'CharSheet', ($scope, $http) ->
       array.push(obj)
     $scope.char.abilities = array
     $scope.$apply()
-
