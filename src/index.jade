@@ -7,11 +7,11 @@ html(lang="en", ng-app="dndCharacterSheets", ng-controller="CharSheet")
     script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
     script(src="/third-party/angular.js")
     script(src="/js/main.js")
-    link(rel="stylesheet", type="text/css", href="/sass/styles.css")
+    link(rel="stylesheet", type="text/css", href="/css/styles.css")
 
   body
     div.container-fluid
       div.row
         div.center-col
-          include character_info_block.jade
-          include character_stats_block.jade
+          include templates/character_info_block.jade
+          include templates/character_stats_block.jade
