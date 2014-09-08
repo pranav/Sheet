@@ -1,0 +1,17 @@
+doctype html
+html(lang="en", ng-app="dndCharacterSheets", ng-controller="CharSheet")
+  head
+    title(ng-bind-template="{{ charName }}") Character Template
+    link(rel="stylesheet", type="text/css", href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
+    script(src="//code.jquery.com/jquery-1.11.0.min.js")
+    script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+    script(src="/third-party/angular.js")
+    script(src="/js/main.js")
+    link(rel="stylesheet", type="text/css", href="/css/styles.css")
+
+  body
+    div.container-fluid
+      div.row
+        div.center-col
+          include templates/character_info_block.jade
+          include templates/character_stats_block.jade
