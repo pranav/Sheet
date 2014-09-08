@@ -11,3 +11,6 @@ sass:
 
 jade:
 	@(jade -o ./dist/static/html/ -w ./src/static/jade/ 2>&1 > jade.log) &
+
+clean:
+	@rm coffee.log sass.log jade.log
