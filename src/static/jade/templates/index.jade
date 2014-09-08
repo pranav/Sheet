@@ -3,5 +3,5 @@ div.container
         div.col-md-12
             p Your character sheets
             ul
-                li(ng-repeat="id in sheetIds")
-                    a(href="/sheet/{{ id }}"){{ id }}
+                li(ng-repeat="s in sheets")
+                    a(href="/sheet/{{ s.id }}"){{ s.name }}

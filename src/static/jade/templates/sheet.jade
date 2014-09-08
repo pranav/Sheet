@@ -3,3 +3,10 @@ div.container.sheet
         div.col-md-4
             img.img-responsive(src="{{ sheet.race_img }}")
             h3 {{ sheet.name }} ({{ sheet.race }})
+
+        div.col-md-4
+            table.table.table-condensed
+                tbody
+                    tr(ng-repeat="(attribute, value) in sheet.attributes")
+                        td {{ attribute }}
+                        td {{ value }}
