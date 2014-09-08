@@ -1,5 +1,20 @@
 {
     "id": 1,
     "name": "Yjone",
-    "race": "Barbarian"   
+    "race": "Half-Orc",
+    "race_img": "http://mikemonaco.files.wordpress.com/2009/11/35ehalford.jpg",
+    "classes": [
+        {
+            "class": "Barbarian",
+            "level": 4
+        }
+    ],
+    "attributes": {
+        "STR": 38,
+        "DEX": 14,
+        "CON": 16,
+        "INT": 5,
+        "WIS": 5,
+        "CHA": 6
+    }
 }

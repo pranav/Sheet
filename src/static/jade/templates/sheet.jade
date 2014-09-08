@@ -1,4 +1,5 @@
-p.
-    {{ sheet.name }}
-p.
-    {{ sheet.race }}
+div.container.sheet
+    div.row
+        div.col-md-4
+            img.img-responsive(src="{{ sheet.race_img }}")
+            h3 {{ sheet.name }} ({{ sheet.race }})
