@@ -1,2 +1,7 @@
-div.
-    {{ index_test }}
+div.container
+    div.row
+        div.col-md-12
+            p Your character sheets
+            ul
+                li(ng-repeat="id in sheetIds")
+                    a(href="/sheet/{{ id }}"){{ id }}

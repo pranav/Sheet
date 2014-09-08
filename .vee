@@ -1,5 +1,6 @@
 name: "Sheet"
 routes:
   ".*/static/(.*)": "file://./dist/static/$1"
+  ".*/api/v1/sheet/all": "file://./test/all.json"
   ".*/api/v1/sheet/1": "file://./test/1.json"
   ".*": "file://./dist/static/html/index.html"

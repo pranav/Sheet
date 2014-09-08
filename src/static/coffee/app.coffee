@@ -20,8 +20,9 @@ sheetControllers.controller('BaseCtrl', ['$scope', ($scope) ->
     $scope.test = 'test'
 ])
 
-sheetControllers.controller('IndexCtrl', ['$scope', ($scope) ->
-    $scope.index_test = 'test2'
+sheetControllers.controller('IndexCtrl', ['$scope', 'Sheet', ($scope, Sheet) ->
+    Sheet.all (sheetIds) ->
+        $scope.sheetIds = sheetIds
 ])
 
 sheetControllers.controller('SheetCtrl', ['$scope', '$routeParams', 'Sheet', ($scope, $routeParams, Sheet) ->
