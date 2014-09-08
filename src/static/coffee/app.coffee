@@ -1,9 +1,12 @@
-sheetApp = angular.module 'sheetApp', ['ngRoute', 'sheetControllers']
+sheetApp = angular.module 'sheetApp', ['ngRoute', 'sheetServices','sheetControllers']
 
 sheetApp.config(['$routeProvider', '$locationProvider', ($routeProvider, $locationProvider) ->
     $routeProvider.when('/', {
         templateUrl: '/static/html/templates/index.html',
         controller: 'IndexCtrl'
+    }).when('/sheet/:id', {
+        templateUrl: '/static/html/templates/sheet.html',
+        controller: 'SheetCtrl'
     }).otherwise({
         redirectTo: '/'
     })
@@ -19,4 +22,9 @@ sheetControllers.controller('BaseCtrl', ['$scope', ($scope) ->
 
 sheetControllers.controller('IndexCtrl', ['$scope', ($scope) ->
     $scope.index_test = 'test2'
+])
+
+sheetControllers.controller('SheetCtrl', ['$scope', '$routeParams', 'Sheet', ($scope, $routeParams, Sheet) ->
+    Sheet.get {id: $routeParams.id}, (sheet) ->
+        $scope.sheet = sheet
 ])
