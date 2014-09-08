@@ -1,3 +1,4 @@
 name: "Sheet"
 routes:
   ".*/static/(.*)": "file://./dist/static/$1"
+  ".*": "file://./dist/static/html/index.html"

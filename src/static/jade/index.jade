@@ -1,8 +1,18 @@
 doctype html
-html(lang='en')
+html(lang='en', ng-app="sheetApp")
     head
-        title= Sheet
-        script(type='text/javascript', src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+        title Sheet
         link(rel='stylesheet', href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
-    body
-        p Sounds good bro
+        link(rel='stylesheet', href="/static/css/style.css")
+    body(ng-controller='BaseCtrl')
+        h1.text-center It's the Sheet
+            h2.text-center Because what D&amp;D needed was more CRUD
+        div(ng-view)
+        
+
+
+        script(type="text/javascript", src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+        script(type="text/javascript", src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js")            
+        script(type="text/javascript", src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js')
+        script(type='text/javascript', src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+        script(type='text/javascript', src="/static/js/app.js")
