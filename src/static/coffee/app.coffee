@@ -1,12 +1,14 @@
 sheetApp = angular.module 'sheetApp', ['ngRoute', 'sheetControllers']
 
-sheetApp.config(['$routeProvider', ($routeProvider) ->
+sheetApp.config(['$routeProvider', '$locationProvider', ($routeProvider, $locationProvider) ->
     $routeProvider.when('/', {
         templateUrl: '/static/html/templates/index.html',
         controller: 'IndexCtrl'
     }).otherwise({
         redirectTo: '/'
     })
+
+    $locationProvider.html5Mode(true)
 ])
 
 sheetControllers = angular.module('sheetControllers', [])
