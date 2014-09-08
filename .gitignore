@@ -1,3 +1,8 @@
+# Compiled assets
+dist/static/js/*.js
+dist/static/css/*.css
+dist/static/html/*.html
+
 # Logs
 logs
 *.log
